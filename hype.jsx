@@ -14,8 +14,6 @@ function hype(name, attributes, ...children) {
 
 	var el = document.createElement(name);
 
-	var start = 1;
-
 	for (var attr in attributes) {
 		if (attr.startsWith("on") && typeof attributes[attr] === "function") {
 			el.addEventListener(attr.substr(2).toLocaleLowerCase(), attributes[attr], false)
